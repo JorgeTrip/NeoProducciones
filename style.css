@@ -3,12 +3,6 @@
 	padding: 0 1em;
 }
 
-@media screen and (min-width: 100em){ 
-	.centrado{			
-		max-width: 50em;
-	}
-}
-
 .cabecera{
 	position: fixed; /* Deja la barra fija */
 	margin-top: .2rem;
@@ -17,6 +11,45 @@
     display: flex;
     justify-content: center;
 	background: hsl(0, 0%, 5%);
+}
+
+.espacioMain{
+	padding-top: 5rem;
+}
+
+.pie{
+	width: 100vw;
+	height: 3rem;
+    display: flex;
+    justify-content: center;
+	background: hsl(0, 0%, 5%);
+}
+
+@media screen and (max-width: 496px){ 
+	.centrado{			
+		max-width: 496px;
+	}
+	.cabecera{
+		height: 6rem;
+	}
+	.espacioMain{
+		padding-top: 8rem;
+	}
+	.pie{
+		height: 6rem;
+	}
+}
+
+@media screen and (max-width:1024px) and (min-width:640px) {
+    .centrado{			
+		max-width: 720px;
+	}
+}
+
+@media screen and (min-width:1024px) {
+	.centrado{			
+		max-width: 720px;
+	}
 }
 
 .menu-section{
@@ -44,6 +77,16 @@
 	transition: all 0.2s ease-in;
 }
 
+.menu li a:active {
+    color: #ffe6be;
+	text-shadow:0px 0px 30px #fdec6e;
+	-moz-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+	text-align: center;
+}
+
 .menu li a:hover {
     color: #ffe6be;
 	text-shadow:0px 0px 30px #fdec6e;
@@ -67,12 +110,14 @@
 
  }
 
- .pie{
-	width: 100vw;
-	height: 3rem;
-    display: flex;
-    justify-content: center;
-	background: hsl(0, 0%, 5%);
+.titulo{
+	text-align: center;
+}
+
+.aclaracion{
+	color:red;
+	font-size: 0.7rem;
+	display: inline-block;
 }
 
  .logo {
@@ -92,10 +137,6 @@
 	font-style: italic;
 	font-size: 0.8rem;
 }
-
- .espacioMain{
-	 padding-top: 5rem;
- }
 
  .espacioFooter{
 	 margin-top: 3rem;
