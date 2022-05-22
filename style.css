@@ -5,7 +5,7 @@
 
 .cabecera{
 	position: fixed; /* Deja la barra fija */
-	margin-top: .2rem;
+	margin-top: .5rem;
 	width: 100vw;
 	height: 3rem;
     display: flex;
@@ -19,11 +19,19 @@
 
 .pie{
 	width: 100vw;
-	height: 3rem;
+	height: 9rem;
+	font-size: 0.8rem;
     display: flex;
     justify-content: center;
 	background: hsl(0, 0%, 5%);
 }
+
+.footerGrid {
+	display: grid;
+	grid-template-columns: 13rem 7.5rem 11.5rem;
+	grid-template-rows: 7rem 2rem;
+	gap: 0.5rem;
+ }
 
 @media screen and (max-width: 496px){ 
 	.centrado{			
@@ -35,8 +43,12 @@
 	.espacioMain{
 		padding-top: 8rem;
 	}
-	.pie{
-		height: 6rem;
+	.footerGrid {
+		grid-template-columns: 13rem 5rem 7rem;
+		grid-template-rows: 8rem 2rem;
+	}
+	.pie {
+		height: 10rem;
 	}
 }
 
@@ -84,7 +96,6 @@
 	-o-transition: all 0.2s ease-in;
 	-webkit-transition: all 0.2s ease-in;
 	transition: all 0.2s ease-in;
-	text-align: center;
 }
 
 .menu li a:hover {
@@ -94,7 +105,6 @@
 	-o-transition: all 0.2s ease-in;
 	-webkit-transition: all 0.2s ease-in;
 	transition: all 0.2s ease-in;
-	text-align: center;
 }
  
  .menu-simple ul{
@@ -107,10 +117,13 @@
  .menu-simple li{
  	flex:1 0 auto; /*si hay espacio disponible crece en 1, si no, se queda en cero, y si es menor es auto*/
  	text-align: center; /*alineo las palabras de los botones*/
-
  }
 
 .titulo{
+	text-align: center;
+}
+
+.contenido{
 	text-align: center;
 }
 
@@ -133,11 +146,18 @@
 	la página https://codepen.io/sosuke/pen/Pjoqqp*/
  }
 
-.copyright {
+#copyright {
 	font-style: italic;
 	font-size: 0.8rem;
+	text-align: center;
+	grid-column-start: 1;
+	grid-column-end: 4;
 }
 
  .espacioFooter{
 	 margin-top: 3rem;
+ }
+
+ .mapa {
+	 height: 10rem;
  }
