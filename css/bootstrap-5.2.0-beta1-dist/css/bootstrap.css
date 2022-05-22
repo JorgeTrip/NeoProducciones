@@ -56,8 +56,10 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  --bs-body-color: #fde9e9;
+  /*cabié el color de letras por defecto*/
+  --bs-body-bg: rgb(21, 21, 21);
+  /*cabié el color de fondo por defecto*/
   --bs-border-width: 1px;
   --bs-border-style: solid;
   --bs-border-color: #dee2e6;
@@ -68,7 +70,8 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-heading-color: ;
+  --bs-heading-color: #fff3cd;
+  /*cabié el color de títulos por defecto*/
   --bs-link-color: #0d6efd;
   --bs-link-hover-color: #0a58ca;
   --bs-code-color: #d63384;
