@@ -34,65 +34,30 @@
     </header>
     
     <main class="espacioMain">
-        <form action="https://formspree.io/f/xvollpnn" method="post" id="formulario">
-            <div class="centrado">
-                <div class="mb-4">
-                    <h2 class="titulo">Contacto:</h2>
-                    <br>
-                    <p class="text-center">Contanos qué tenés en mente para tu evento, book, fotografía de inmueble o producto.</p>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-                    <p class="aclaracion">*Requerido</p>
-                    <input type="text" name="nombre" class="form-control" id="exampleFormControlInput1" placeholder="Nombre" required>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
-                    <input class="form-control" name="telefono" id="exampleFormControlInput1" placeholder="Teléfono">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Correo de contacto</label>
-                    <p class="aclaracion">*Requerido</p>
-                    <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="tu_correo@ejemplo.com" required>
-                </div>
-                <div class="mb-3">
-                    <label>Seleccionar tipo de servicio:</label>
-                    <p class="aclaracion">*Requerido</p>
-                    <br>
-                        <select name="servicioelegido">
-                            <option value="" disabled selected>Elegí uno</option>
-                            <option value="15">15 años</option>
-                            <option value="18">18 años</option>
-                            <option value="Mitzvah">Bar/Bat Mitzvah</option>
-                            <option value="Casamiento">Casamiento</option>
-                            <option value="Bautismo">Bautismo</option>
-                            <option value="Book">Book Fotográfico</option>
-                            <option value="Inmobiliaria">Inmobiliaria</option>
-                            <option value="Otro">...Otro</option>
-                        </select>   
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Contanos lo que necesitás</label>
-                    <textarea class="form-control" name="comentario" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-secondary">Enviar</button>
-                <button type="reset" class="btn btn-secondary">Restablecer</button>
-            </div>
-        </form>
+
 
     </main>
     
     <footer class="pie espacioFooter">
-        <section class="menu-simple menu">
-            <ul>
-                <li><a href="https://www.facebook.com/neoproduccionestm" target=”_blank”><img class="social" src="img/facebook.svg">/neoproduccionestm</a></li>
-                <li><a href="https://www.instagram.com/neo_producciones_tm" target=”_blank”><img class="social" src="img/instagram.svg">/neo_producciones_tm</a></li>
-            </ul>
-        </section>
-        <!--<span>
-            <p class="copyright">NEO Producciones™ 2022</p>
-        </span>
-    --> 
+        <div class="footerGrid centrado">
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.5326253904204!2d-58.39830278427805!3d-34.615978180456274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccae74e53d885%3A0xc872ad23f1fbbbe6!2sM%C3%A9xico%202100%2C%20C1222ABF%20CABA!5e0!3m2!1ses-419!2sar!4v1653248920209!5m2!1ses-419!2sar" width="200" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div>
+                <p>Estamos en México 2100, Balvanera, CABA, Argentina.</p> 
+            </div>
+            <div class="menu menu-simple">
+                <ul>
+                    <li><a href="https://www.facebook.com/neoproduccionestm" target=”_blank”><img class="social" src="img/facebook.svg"></a></li>
+                    <li id="esconder"><a href="https://www.facebook.com/neoproduccionestm" target=”_blank”>/neoproduccionestm</a></li>
+                    <li><a href="https://www.instagram.com/neo_producciones_tm" target=”_blank”><img class="social" src="img/instagram.svg"></a></li>
+                    <li id="esconder"><a href="https://www.instagram.com/neo_producciones_tm" target=”_blank”>/neo_producciones_tm</a></li>
+                </ul>
+            </div>
+            <div id="copyright">
+                <p>NEO Producciones™ 2022</p>
+            </div>
+        </div>
     </footer>
    
     <!-- Bootstrap: Javascript con Popper, se copia antes de cerrar el Body-->

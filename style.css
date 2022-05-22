@@ -6,20 +6,16 @@
 .cabecera{
 	position: fixed; /* Deja la barra fija */
 	margin-top: .5rem;
-	width: 100vw;
+	width: 100%;
 	height: 3rem;
     display: flex;
     justify-content: center;
 	background: hsl(0, 0%, 5%);
 }
 
-.espacioMain{
-	padding-top: 5rem;
-}
-
 .pie{
-	width: 100vw;
-	height: 9rem;
+	width: 100%;
+	height: 9.5rem;
 	font-size: 0.8rem;
     display: flex;
     justify-content: center;
@@ -27,13 +23,25 @@
 }
 
 .footerGrid {
+	padding-top: 0.5rem;
 	display: grid;
-	grid-template-columns: 13rem 7.5rem 11.5rem;
+	grid-template-columns: 13rem 7.5rem 10.9rem;
 	grid-template-rows: 7rem 2rem;
 	gap: 0.5rem;
  }
 
+ .social {
+	height: 1.5em;
+	margin-right: 0.5em;
+	filter: invert(25%) sepia(96%) saturate(1509%) hue-rotate(197deg) brightness(94%) contrast(84%);
+	/*Los parámetros de filter, los convertí desde el valor hex del color que quería en 
+	la página https://codepen.io/sosuke/pen/Pjoqqp*/
+ }
+
 @media screen and (max-width: 496px){ 
+	#esconder{
+		display:none;
+	}
 	.centrado{			
 		max-width: 496px;
 	}
@@ -44,11 +52,13 @@
 		padding-top: 8rem;
 	}
 	.footerGrid {
-		grid-template-columns: 13rem 5rem 7rem;
-		grid-template-rows: 8rem 2rem;
+		grid-template-columns: 13rem 5rem 5rem;
 	}
 	.pie {
 		height: 10rem;
+	}
+	.social {
+		height: 2.5em;
 	}
 }
 
@@ -64,12 +74,8 @@
 	}
 }
 
-.menu-section{
-	padding-bottom: 2em;
-	margin-bottom: 2em;
-	border-bottom: 1px solid hsl(0, 0%);
-    /*overflow: hidden;*/
-    top: 0; /* Posiciona la barra arriba de la página */
+.espacioMain{
+	padding-top: 5rem;
 }
 
 .menu ul{
@@ -138,14 +144,6 @@
 	 margin-right: 1em;
  }
 
- .social {
-	height: 1.5em;
-	margin-right: 0.5em;
-	filter: invert(25%) sepia(96%) saturate(1509%) hue-rotate(197deg) brightness(94%) contrast(84%);
-	/*Los parámetros de filter, los convertí desde el valor hex del color que quería en 
-	la página https://codepen.io/sosuke/pen/Pjoqqp*/
- }
-
 #copyright {
 	font-style: italic;
 	font-size: 0.8rem;
@@ -161,3 +159,32 @@
  .mapa {
 	 height: 10rem;
  }
+ 
+ .pie li a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding: .6em .3em;
+	-moz-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}
+
+.pie li a:active {
+    color: #ffe6be;
+	text-shadow:0px 0px 30px #fdec6e;
+	-moz-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}
+
+.pie li a:hover {
+    color: #ffe6be;
+	text-shadow:0px 0px 30px #fdec6e;
+	-moz-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}
