@@ -87,7 +87,6 @@
 
  .logo {
 	height: 5em;
-	margin-right: 1em;
 }
 
  /*===================
@@ -269,8 +268,8 @@
     }
 
     .logo-container {
-        margin-left: 2rem;
-		width: 7rem;
+        margin-left: 0;
+		width: 9rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -280,7 +279,7 @@
         height: 7rem;
         width: auto;
         max-width: 100%;
-        object-fit: contain;
+        object-fit: contain; 
     }
 
     .menu-container {
@@ -312,6 +311,21 @@
         padding: 0.25rem;
         font-size: 1.2rem;
         text-align: center;
+		transition: all 0.2s ease-in;
+    }
+
+	.menu li a:active,
+    .menu li a:hover {
+        color: #ffe6be;
+        text-shadow: 0px 0px 30px #fdec6e;
+    }
+
+	.menu li a:hover {
+        transform: none;
+    }
+
+	.menu li a:active {
+        background-color: rgba(255, 230, 190, 0.2);
     }
 
     .espacioMain {
