@@ -5,17 +5,20 @@
 
 .cabecera{
 	position: fixed; /* Deja la barra fija */
-	margin-top: .5rem;
+	top: 0; /* Asegura que esté pegada a la parte superior */
+	margin-top: .5rem; /* Dejo un margen superior pequeño */
 	width: 100%;
 	height: 3rem;
     display: flex;
     justify-content: center;
 	background: hsl(0, 0%, 5%);
+	z-index: 1000; /* Asegura que esté por encima del carrusel */
 }
 
 .pie{
 	width: 100%;
-	height: 9.5rem;
+	height: 10rem;
+	margin-bottom: .5rem;
 	font-size: 0.8rem;
     display: flex;
     justify-content: center;
@@ -39,7 +42,8 @@
  }
 
  .espacioMain{
-	padding-top: 5rem;
+	padding-top: 4rem;
+	margin-bottom: 0; /* Elimina el margen inferior */
 }
 
 @media screen and (max-width: 496px){ 
@@ -111,6 +115,7 @@
 	-o-transition: all 0.2s ease-in;
 	-webkit-transition: all 0.2s ease-in;
 	transition: all 0.2s ease-in;
+	transform: scale(1.05);
 }
  
  .menu-simple ul{
@@ -153,7 +158,8 @@
 }
 
  .espacioFooter{
-	 margin-top: 3rem;
+	 margin-top: 0;
+	 top: .5rem;
  }
 
  .mapa {
@@ -187,4 +193,82 @@
 	-o-transition: all 0.2s ease-in;
 	-webkit-transition: all 0.2s ease-in;
 	transition: all 0.2s ease-in;
+}
+
+/* Estilos para el carrusel */
+.carousel {
+    height: calc(100vh - 14rem); /* Ajusta la altura del carrusel */
+    overflow: hidden;
+}
+
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition: opacity 2.5s ease-in-out; /* Ajusta el tiempo de transición */
+}
+
+.carousel-fade .carousel-item.active {
+    opacity: 1;
+    transition: opacity 3s ease-in-out; /* Ajusta el tiempo que se muestra el item */
+}
+
+.carousel-inner, .carousel-item {
+    height: 100%;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+}
+
+/* Ajustes para las flechas de navegación */
+.carousel-control-prev-icon:after {
+	background-image: none;
+	content: '\2039'; /* Código ASCII de la flecha izquierda */
+	font-size: 5rem;
+	color: white;
+}
+.carousel-control-next-icon:after {
+	background-image: none;
+	content: '\203A'; /* Código ASCII de la flecha derecha */
+	font-size: 5rem;
+	color: white;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0.7;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+	color: #ffe6be;
+	text-shadow:0px 0px 30px #fdec6e;
+	-moz-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}
+
+/* Subtitulos de los items del carrusel */
+.carousel-caption a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Mantiene el color del texto original */
+	font-size: 2rem;
+}
+
+.carousel-caption a:hover {
+    color: inherit; /* Opcional: mantiene el color también al pasar el ratón */
+}
+
+/* Ajustes para móviles */
+@media screen and (max-width: 496px) {
+    .carousel {
+        height: calc(100vh - 16rem); /* Ajusta la altura para móviles */
+    }
+}
+
+#carouselBasicExample {
+    margin-top: 0;
+    margin-bottom: 0;
 }

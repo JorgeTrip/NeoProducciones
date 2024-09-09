@@ -4,21 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- agrego palabras clave-->
     <meta name="keywords" content="fotografía, evento, cumpleaños, quince, casamiento, bautismo, comunión, book">
-    <!-- agrego descripción de la página-->
     <meta name="description" content="Página de fotografía de eventos, books y comercial">
-    <!-- Vinculo también el CSS de Bootstrap que tengo descargado-->
     <link rel="stylesheet" href="css/mdbootstrap/mdb.min.css">
     <link rel="stylesheet" href="css/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
-    <!-- Vinculo el CSS que armé para el proyecto-->
     <link rel="stylesheet" href="css/style.css">
     <title>Neo Producciones</title>
-    <!-- agrego el CDN para acceder al repositorio de iconos Fontawesome, más adelante-->
     <script src="https://kit.fontawesome.com/e547f827f8.js" crossorigin="anonymous"></script>
-    <!-- agrego el icono para que aparezca en la pestaña-->
-    <link rel="icon" href="img/favicon_io/favicon.ico"
- </head>
+    <link rel="icon" href="img/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-O5Wt1nRpFB7stPe5PvY9ssG+/8OXPTtcV1/pa2EwzRJvSjSj2AwmfEsFKx1h8er3qy4P6oE+UDp7P6UHhCpZ1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js" integrity="sha512-qN0X0ivdNFXBb7Cw8Kvq5e5u/bOaZV7GjcvRvY9zzghQmE1iF7w1qw8bbz7FJChDugd5OrbAOJyRvGy9QaEJcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
 <body>
     <header class="cabecera">
         <section class="flex-container">
@@ -30,105 +26,103 @@
                     <li><a href="acerca.html">Nosotros</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
-            </nav>	
+            </nav>
         </section>
     </header>
-    
+
     <main class="espacioMain">
-<!-- Carousel wrapper -->
-<div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
-  <!-- Indicators -->
-  <div class="carousel-indicators">
-    <button
-      type="button"
-      data-mdb-target="#carouselBasicExample"
-      data-mdb-slide-to="0"
-      class="active"
-      aria-current="true"
-      aria-label="Slide 1"
-    ></button>
-    <button
-      type="button"
-      data-mdb-target="#carouselBasicExample"
-      data-mdb-slide-to="1"
-      aria-label="Slide 2"
-    ></button>
-    <button
-      type="button"
-      data-mdb-target="#carouselBasicExample"
-      data-mdb-slide-to="2"
-      aria-label="Slide 3"
-    ></button>
-  </div>
+        <!-- Carousel wrapper -->
+        <div id="carouselBasicExample" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+            <!-- Inner -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/acerca.jpg" class="d-block w-100" alt="Acerca de Nosotros"/>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5><a href="acerca.html">Sobre nosotros</a></h5>
+                        <p><a href="acerca.html">Una trayectoria de 16 años nos avala.</a></p>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <img src="img/contacto.jpg" class="d-block w-100" alt="Contacto"/>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5><a href="contacto.html">Contacto</a></h5>
+                        <p><a href="contacto.html">Pedí presupuesto, o consultá tus dudas.</a></p>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <img src="img/foto.jpg" class="d-block w-100" alt="Fotografía"/>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5><a href="portfolio.html">Portfolio</a></h5>
+                        <p><a href="portfolio.html">Mirá lo que podemos hacer por vos.</a></p>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Inner -->
-  <div class="carousel-inner">
-    <!-- Single item -->
-    <div class="carousel-item active">
-      <img src="img/acerca.jpg" class="d-block w-100" alt="Acerca de Nosotros"/>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Sobre nosotros</h5>
-        <p>Una trayectoria de 16 años nos avala.</p>
-      </div>
-    </div>
-
-    <!-- Single item -->
-    <div class="carousel-item">
-      <img src="img/contacto.jpg" class="d-block w-100" alt="Contacto"/>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Contacto</h5>
-        <p>Pedí presupuesto, o consultá tus dudas.</p>
-      </div>
-    </div>
-
-    <!-- Single item -->
-    <div class="carousel-item">
-      <img src="img/foto.jpg" class="d-block w-100" alt="Fotografia"/>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Portfolio</h5>
-        <p>Mirá lo que podemos hacer por vos.</p>
-      </div>
-    </div>
-  </div>
-  <!-- Inner -->
-
-  <!-- Controls -->
-  <button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-<!-- Carousel wrapper -->
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselBasicExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselBasicExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- Carousel wrapper -->
     </main>
-    
+
     <footer class="pie espacioFooter">
         <div class="footerGrid">
             <div class="mapa">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.5326253904204!2d-58.39830278427805!3d-34.615978180456274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccae74e53d885%3A0xc872ad23f1fbbbe6!2sM%C3%A9xico%202100%2C%20C1222ABF%20CABA!5e0!3m2!1ses-419!2sar!4v1653248920209!5m2!1ses-419!2sar" width="200" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div>
-                <p>Estamos en México 2100, Balvanera, CABA, Argentina.</p> 
+                <p>Estamos en México 2100, Balvanera, CABA, Argentina.</p>
             </div>
             <div class="menu menu-simple">
                 <ul>
-                    <li><a href="https://www.facebook.com/neoproduccionestm" target=”_blank”><img class="social" src="img/facebook.svg"></a></li>
-                    <li id="esconder"><a href="https://www.facebook.com/neoproduccionestm" target=”_blank”>/neoproduccionestm</a></li>
-                    <li><a href="https://www.instagram.com/neo_producciones_tm" target=”_blank”><img class="social" src="img/instagram.svg"></a></li>
-                    <li id="esconder"><a href="https://www.instagram.com/neo_producciones_tm" target=”_blank”>/neo_producciones_tm</a></li>
+                    <li><a href="https://www.facebook.com/neoproduccionestm" target="_blank"><img class="social" src="img/facebook.svg"></a></li>
+                    <li id="esconder"><a href="https://www.facebook.com/neoproduccionestm" target="_blank">/neoproduccionestm</a></li>
+                    <li><a href="https://www.instagram.com/neo_producciones_tm" target="_blank"><img class="social" src="img/instagram.svg"></a></li>
+                    <li id="esconder"><a href="https://www.instagram.com/neo_producciones_tm" target="_blank">/neo_producciones_tm</a></li>
                 </ul>
             </div>
             <div id="copyright">
-                <p>NEO Producciones™ 2022</p>
+                <p>NEO Producciones™ <span id="currentYear"></span></p>
             </div>
+            
+            <script>
+                const year = new Date().getFullYear();
+                document.getElementById("currentYear").textContent = year;
+            </script>
+            
         </div>
     </footer>
-   
-    <!-- Bootstrap: Javascript con Popper, se copia antes de cerrar el Body-->
+
+    <!-- Bootstrap: Javascript con Popper, se copia antes de cerrar el Body -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+
+    <!-- touchSwipe para habilitar swipe en dispositivos táctiles -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script>
+        // Habilitar swipe para dispositivos táctiles
+        $("#carouselBasicExample").swipe({
+            swipe: function(event, direction) {
+                if (direction === 'left') $(this).carousel('next');
+                if (direction === 'right') $(this).carousel('prev');
+            },
+            allowPageScroll: "vertical"
+        });
+    </script>
+
+    <style>
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: transparent;
+            background-image: none;
+        }
+    </style>
 </body>
 </html>
