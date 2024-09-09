@@ -2,13 +2,19 @@
   Estilos para generales
   ===================*/
   
-  .centrado{
+.centrado{
 	margin:0 auto; 
 	padding: 0 1em;
 }
 
 .titulo{
 	text-align: center;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 .contenido{
@@ -29,7 +35,7 @@
 	position: fixed; /* Deja la barra fija */
 	width: 100%; /* Ajusta al ancho de la pantalla */
 	top: 0; /* Asegura que esté pegada a la parte superior */
-	margin-top: .5rem; /* Dejo un margen superior pequeño */
+	margin-top: 1rem; /* Dejo un margen superior pequeño */
 	height: 3rem;
     display: flex;
     justify-content: center;
@@ -118,7 +124,7 @@
 
 .social {
 	height: 1.5em;
-	margin-right: 0.5em;
+	margin-right: 0;
 	filter: invert(25%) sepia(96%) saturate(1509%) hue-rotate(197deg) brightness(94%) contrast(84%);
 	/*Los parámetros de filter, los convertí desde el valor hex del color que quería en 
 	la página https://codepen.io/sosuke/pen/Pjoqqp*/
@@ -172,6 +178,9 @@
 .espacioMain{
 	padding-top: 4rem;
 	margin-bottom: 0; /* Elimina el margen inferior */
+	flex: 1;
+	display: flex;
+    flex-direction: column;
 }
 
 /* Estilos para el carrusel */
@@ -329,7 +338,7 @@
     }
 
     .espacioMain {
-        padding-top: 7rem;
+        padding-top: 7rem; /* Dejo un espacio igual a los 6 rem de la barra + 1 rem margen */
     }
 
 	#esconder{
@@ -341,12 +350,12 @@
 	}
 	
 	.pie {
+		margin-top: .5rem;
 		height: 10rem;
 	}
 
 	.espacioFooter{
-		margin-top: .5rem;
-		top: .5rem;
+		margin-top: 0;
 	}
 
 	.social {
@@ -360,6 +369,7 @@
    
 	.carousel {
         height: calc(100vh - 20rem);
+		min-height: 300px; /* Asegura una altura mínima para el carrusel en pantallas chicas */
     }
     
 	.carousel-caption {
