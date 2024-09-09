@@ -1,126 +1,40 @@
-.centrado{
+/*===================
+  Estilos para generales
+  ===================*/
+  
+  .centrado{
 	margin:0 auto; 
 	padding: 0 1em;
 }
 
+.titulo{
+	text-align: center;
+}
+
+.contenido{
+	text-align: center;
+}
+
+.aclaracion{
+	color:red;
+	font-size: 0.7rem;
+	display: inline-block;
+}
+
+/*===================
+  ENCABEZADO
+  ===================*/
+
 .cabecera{
 	position: fixed; /* Deja la barra fija */
+	width: 100%; /* Ajusta al ancho de la pantalla */
 	top: 0; /* Asegura que esté pegada a la parte superior */
 	margin-top: .5rem; /* Dejo un margen superior pequeño */
-	width: 100%;
 	height: 3rem;
     display: flex;
     justify-content: center;
 	background: hsl(0, 0%, 5%);
 	z-index: 1000; /* Asegura que esté por encima del carrusel */
-}
-
-.pie{
-	width: 100%;
-	height: 10rem;
-	margin-bottom: .5rem;
-	font-size: 0.8rem;
-    display: flex;
-    justify-content: center;
-	background: hsl(0, 0%, 5%);
-}
-
-.footerGrid {
-	padding-top: 0.5rem;
-	display: grid;
-	grid-template-columns: 13rem 7.5rem 10.9rem;
-	grid-template-rows: 7rem 2rem;
-	gap: 0.5rem;
- }
-
- .social {
-	height: 1.5em;
-	margin-right: 0.5em;
-	filter: invert(25%) sepia(96%) saturate(1509%) hue-rotate(197deg) brightness(94%) contrast(84%);
-	/*Los parámetros de filter, los convertí desde el valor hex del color que quería en 
-	la página https://codepen.io/sosuke/pen/Pjoqqp*/
- }
-
- .espacioMain{
-	padding-top: 4rem;
-	margin-bottom: 0; /* Elimina el margen inferior */
-}
-
-/* Ajustes para móviles */
-@media screen and (max-width: 496px) {
-	#esconder{
-		display:none;
-	}
-	.cabecera {
-        height: 6rem;
-        flex-direction: column;
-        align-items: flex-start;
-        padding-left: 1rem;
-    }
-	.espacioMain{
-		padding-top: 8rem;
-	}
-	.footerGrid {
-		grid-template-columns: 13rem 5rem 5rem;
-	}
-	.pie {
-		height: 10rem;
-	}
-	.social {
-		height: 2.5em;
-	}
-    .logo {
-        height: 100%;
-        margin-right: 0;
-        align-self: flex-start;
-    }
-    .flex-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .menu ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-    .menu li {
-        margin-right: 1rem;
-    }
-    .espacioMain {
-        padding-top: 7rem;
-    }
-    .carousel {
-        height: calc(100vh - 16rem);
-    }
-    .carousel-caption {
-        display: block !important;
-        background-color: rgba(0, 0, 0, 0.5);
-        left: 0;
-        right: 0;
-        bottom: 0;
-        padding: 10px;
-    }
-    .carousel-caption h5 {
-        font-size: 1.2rem;
-        margin-bottom: 5px;
-    }
-    .carousel-caption p {
-        font-size: 1rem;
-        margin-bottom: 0;
-    }
-}
-
-
-@media screen and (max-width:1024px) and (min-width:496px) {
-    .centrado{			
-		max-width: 720px;
-	}
-}
-
-@media screen and (min-width:1024px) {
-	.centrado{			
-		max-width: 720px;
-	}
 }
 
 .menu ul{
@@ -171,24 +85,45 @@
  	text-align: center; /*alineo las palabras de los botones*/
  }
 
-.titulo{
-	text-align: center;
-}
-
-.contenido{
-	text-align: center;
-}
-
-.aclaracion{
-	color:red;
-	font-size: 0.7rem;
-	display: inline-block;
-}
-
  .logo {
-	 height: 2.7em;
-	 margin-right: 1em;
+	height: 5em;
+	margin-right: 1em;
+}
+
+ /*===================
+  PIE DE PÁGINA	
+  ===================*/
+
+.pie{
+	height: 10rem;
+	margin-top: .5rem; /* Dejo un margen superior pequeño */
+	margin-bottom: .5rem;
+	font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+	background: hsl(0, 0%, 5%);
+}
+
+.footerGrid {
+	padding-top: 0.5rem;
+	display: grid;
+	grid-template-columns: 13rem 7.5rem 10.9rem;
+	grid-template-rows: 7rem 2rem;
+	gap: 0.5rem;
  }
+
+.espacioFooter{
+	margin-top: 0;
+	top: .5rem;
+}
+
+.social {
+	height: 1.5em;
+	margin-right: 0.5em;
+	filter: invert(25%) sepia(96%) saturate(1509%) hue-rotate(197deg) brightness(94%) contrast(84%);
+	/*Los parámetros de filter, los convertí desde el valor hex del color que quería en 
+	la página https://codepen.io/sosuke/pen/Pjoqqp*/
+}
 
 #copyright {
 	font-style: italic;
@@ -198,16 +133,11 @@
 	grid-column-end: 4;
 }
 
- .espacioFooter{
-	 margin-top: 0;
-	 top: .5rem;
- }
-
- .mapa {
+.mapa {
 	 height: 10rem;
- }
+}
  
- .pie li a {
+.pie li a {
 	display: block;
 	text-decoration: none;
 	color: white;
@@ -236,10 +166,24 @@
 	transition: all 0.2s ease-in;
 }
 
+/*===================
+  CONTENIDO PRINCIPAL
+  ===================*/
+
+.espacioMain{
+	padding-top: 4rem;
+	margin-bottom: 0; /* Elimina el margen inferior */
+}
+
 /* Estilos para el carrusel */
 .carousel {
     height: calc(100vh - 14rem); /* Ajusta la altura del carrusel */
-    overflow: hidden;
+	overflow: hidden;
+}
+
+#carouselBasicExample {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .carousel-fade .carousel-item {
@@ -298,18 +242,147 @@
 	font-size: 2rem;
 }
 
+.carousel-caption {
+	display: block !important;
+	background-color: rgba(0, 0, 0, 0.5);
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 10px;
+	margin-bottom: 2rem;
+}
+
 .carousel-caption a:hover {
     color: inherit; /* Opcional: mantiene el color también al pasar el ratón */
 }
 
-/* Ajustes para móviles */
+/*====================
+  Estilos para móviles
+  ====================*/
 @media screen and (max-width: 496px) {
-    .carousel {
-        height: calc(100vh - 16rem); /* Ajusta la altura para móviles */
+	.cabecera {
+        height: 6rem;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .logo-container {
+        margin-left: 2rem;
+		width: 7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo {
+        height: 7rem;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    .menu-container {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0.25rem;
+    }
+
+	/* Menú UL, es una lista no ordenada */
+    .menu ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: contents;
+    }
+
+	/* Menú LI, es un elemento de la lista */
+    .menu li {
+        display: flex;
+    }
+
+    .menu li a {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.25rem;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .espacioMain {
+        padding-top: 7rem;
+    }
+
+	#esconder{
+		display:none; /* No oculta el menú */
+	}
+	
+	.footerGrid {
+		grid-template-columns: 13rem 5rem 5rem;
+	}
+	
+	.pie {
+		height: 10rem;
+	}
+
+	.espacioFooter{
+		margin-top: .5rem;
+		top: .5rem;
+	}
+
+	.social {
+		height: 2.5em;
+	}
+    
+	.flex-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+   
+	.carousel {
+        height: calc(100vh - 20rem);
+    }
+    
+	.carousel-caption {
+        display: block !important;
+        background-color: rgba(0, 0, 0, 0.5);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 10px;
+    }
+    
+	.carousel-caption h5 {
+        font-size: .5rem;
+        margin-bottom: 5px;
+    }
+   
+	.carousel-caption p {
+        font-size: .3rem;
+        margin-bottom: 0;
     }
 }
 
-#carouselBasicExample {
-    margin-top: 0;
-    margin-bottom: 0;
+/*===================
+  Estilos para tablets
+  ===================*/
+@media screen and (max-width:1024px) and (min-width:496px) {
+    .centrado{			
+		max-width: 720px;
+	}
 }
+
+/*=============================
+  Estilos para pantallas grandes
+  =============================*/
+@media screen and (min-width:1024px) {
+	.centrado{			
+		max-width: 1024px;
+	}
+}
+
