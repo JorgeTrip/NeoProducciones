@@ -46,13 +46,17 @@
 	margin-bottom: 0; /* Elimina el margen inferior */
 }
 
-@media screen and (max-width: 496px){ 
+/* Ajustes para móviles */
+@media screen and (max-width: 496px) {
 	#esconder{
 		display:none;
 	}
-	.cabecera{
-		height: 6rem;
-	}
+	.cabecera {
+        height: 6rem;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 1rem;
+    }
 	.espacioMain{
 		padding-top: 8rem;
 	}
@@ -65,10 +69,47 @@
 	.social {
 		height: 2.5em;
 	}
-	.espacioMain{
-		padding-top: 7rem;
-	}
+    .logo {
+        height: 100%;
+        margin-right: 0;
+        align-self: flex-start;
+    }
+    .flex-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .menu li {
+        margin-right: 1rem;
+    }
+    .espacioMain {
+        padding-top: 7rem;
+    }
+    .carousel {
+        height: calc(100vh - 16rem);
+    }
+    .carousel-caption {
+        display: block !important;
+        background-color: rgba(0, 0, 0, 0.5);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 10px;
+    }
+    .carousel-caption h5 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+    .carousel-caption p {
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
 }
+
 
 @media screen and (max-width:1024px) and (min-width:496px) {
     .centrado{			
